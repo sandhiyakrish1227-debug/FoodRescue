@@ -1,0 +1,173 @@
+
+.about {
+
+  .about-header {
+    background: #e8f5e9;
+    padding: 65px 20px;
+    text-align: center;
+
+    h1 {
+      color: #245c38;
+      font-size: 40px;
+    }
+
+    p {
+      color: #666;
+      font-size: 18px;
+    }
+  }
+
+  .about-content {
+    padding: 50px 12%;
+    text-align: center;
+
+    h2 {
+      color: #287a40;
+      font-size: 30px;
+    }
+
+    p {
+      color: #666;
+      font-size: 17px;
+      line-height: 1.9;
+    }
+  }
+
+  .mission-vision {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 30px 10%;
+
+    .about-card {
+      padding: 35px;
+      background: #f5faf5;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+
+      h2 {
+        color: #287a40;
+      }
+
+      p {
+        color: #666;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  .objectives {
+    padding: 45px 12%;
+    text-align: center;
+
+    h2 {
+      color: #245c38;
+      font-size: 30px;
+    }
+
+    ul {
+      display: inline-block;
+      text-align: left;
+      line-height: 2.2;
+      color: #555;
+      font-size: 17px;
+    }
+  }
+}
+
+// Tablet
+@media (max-width: 992px) {
+  .about {
+
+    .about-content {
+      padding: 40px 7%;
+    }
+
+    .mission-vision {
+      padding: 25px 6%;
+      gap: 20px;
+    }
+
+    .objectives {
+      padding: 35px 7%;
+    }
+  }
+}
+
+// Mobile
+@media (max-width: 768px) {
+  .about {
+
+    .about-header {
+      padding: 45px 15px;
+
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .about-content {
+      padding: 35px 6%;
+
+      h2 {
+        font-size: 25px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .mission-vision {
+      grid-template-columns: 1fr;
+      padding: 20px 6%;
+
+      .about-card {
+        padding: 25px 20px;
+      }
+    }
+
+    .objectives {
+      padding: 30px 6%;
+
+      h2 {
+        font-size: 25px;
+      }
+
+      ul {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// Small Mobile
+@media (max-width: 480px) {
+  .about {
+
+    .about-header {
+      h1 {
+        font-size: 26px;
+      }
+    }
+
+    .about-content,
+    .objectives {
+      padding: 25px 5%;
+    }
+
+    .mission-vision {
+      padding: 15px 5%;
+    }
+  }
+}

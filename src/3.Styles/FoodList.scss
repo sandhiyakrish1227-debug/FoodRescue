@@ -1,0 +1,264 @@
+.foodlist {
+  padding: 40px 6%;
+  min-height: 80vh;
+  background: #f8faf7;
+
+  h1 {
+    text-align: center;
+    color: #245c38;
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+
+  // Search and Category Filter
+
+  > input,
+  > select {
+    padding: 12px 15px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: #219653;
+      box-shadow: 0 0 5px rgba(33, 150, 83, 0.2);
+    }
+  }
+
+  > input {
+    width: 60%;
+    max-width: 450px;
+  }
+
+  > select {
+    width: 220px;
+    background: white;
+  }
+
+  // Food Cards Container
+
+  .food-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  // Individual Food Card
+
+  .food-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+    overflow-wrap: anywhere;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #245c38;
+      font-size: 23px;
+      margin: 10px 0;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+      margin: 9px 0;
+      font-size: 15px;
+    }
+
+    // Food Status
+
+    .status {
+      display: inline-block;
+      padding: 7px 15px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 13px;
+    }
+
+    .available {
+      background: #d8f5df;
+      color: #187438;
+    }
+
+    .donated {
+      background: #ffe0e0;
+      color: #c62828;
+    }
+
+    // Buttons
+
+    button {
+      padding: 10px 15px;
+      margin: 6px 5px 0 0;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .donate-btn {
+      background: #218838;
+
+      &:hover {
+        background: #155724;
+      }
+    }
+
+    .edit-btn {
+      background: #007bff;
+
+      &:hover {
+        background: #0056b3;
+      }
+    }
+
+    .delete-btn {
+      background: #dc3545;
+
+      &:hover {
+        background: #a71d2a;
+      }
+    }
+  }
+
+  // Edit Form
+
+  .edit-form {
+    h2 {
+      color: #245c38;
+      text-align: center;
+      font-size: 21px;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 11px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .save-btn {
+      background: #218838;
+
+      &:hover {
+        background: #155724;
+      }
+    }
+
+    .cancel-btn {
+      background: #6c757d;
+
+      &:hover {
+        background: #495057;
+      }
+    }
+  }
+}
+
+// Tablet Responsive
+
+@media (max-width: 992px) {
+  .foodlist {
+    .food-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    > input {
+      width: 55%;
+    }
+  }
+}
+
+// Mobile Responsive
+
+@media (max-width: 768px) {
+  .foodlist {
+    padding: 30px 5%;
+
+    h1 {
+      font-size: 29px;
+    }
+
+    > input,
+    > select {
+      width: 100%;
+      margin: 8px 0;
+    }
+
+    .food-container {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .food-card {
+      padding: 18px;
+
+      img {
+        height: 220px;
+      }
+    }
+  }
+}
+
+// Small Mobile
+
+@media (max-width: 480px) {
+  .foodlist {
+    padding: 25px 4%;
+
+    h1 {
+      font-size: 25px;
+    }
+
+    .food-card {
+      padding: 14px;
+
+      img {
+        height: 180px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      button {
+        padding: 9px 11px;
+        font-size: 12px;
+      }
+    }
+  }
+}

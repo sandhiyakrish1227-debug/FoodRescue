@@ -1,0 +1,304 @@
+.home {
+  width: 100%;
+  color: #333;
+
+  // Hero Section
+  .hero {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    padding: 50px 10%;
+    background: linear-gradient(120deg, #e8f5e9, #c8e6c9);
+  }
+
+  .hero-content {
+    max-width: 650px;
+
+    h1 {
+      font-size: 48px;
+      color: #245c38;
+      margin-bottom: 20px;
+
+      span {
+        color: #e67e22;
+      }
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #555;
+    }
+  }
+
+  .hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    a {
+      padding: 13px 25px;
+      text-decoration: none;
+      border-radius: 7px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .donate-btn {
+      background: #287a40;
+      color: white;
+
+      &:hover {
+        background: #195d2e;
+      }
+    }
+
+    .explore-btn {
+      border: 2px solid #287a40;
+      color: #287a40;
+
+      &:hover {
+        background: #287a40;
+        color: white;
+      }
+    }
+  }
+
+  // About Section
+  .home-about {
+    padding: 65px 12%;
+    text-align: center;
+
+    h1 {
+      color: #245c38;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.9;
+      font-size: 17px;
+      color: #666;
+    }
+  }
+
+  // How It Works
+  .how-it-works {
+    padding: 60px 8%;
+    background: #f5faf5;
+    text-align: center;
+
+    h1 {
+      color: #245c38;
+      margin-bottom: 40px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .step-card {
+      padding: 30px 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+
+      &:hover {
+        transform: translateY(-7px);
+      }
+
+      h2 {
+        font-size: 40px;
+      }
+
+      h3 {
+        color: #287a40;
+        margin: 15px 0;
+      }
+
+      p {
+        color: #666;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  // Features
+  .why-choose {
+    padding: 60px 8%;
+    text-align: center;
+
+    h1 {
+      color: #245c38;
+      margin-bottom: 40px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+
+      > div {
+        padding: 25px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+
+        h2 {
+          font-size: 35px;
+        }
+
+        h3 {
+          color: #287a40;
+        }
+
+        p {
+          color: #666;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+
+  // CTA
+  .home-cta {
+    background: #287a40;
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      margin: 15px 0 25px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 13px 28px;
+      background: white;
+      color: #287a40;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        background: #e8f5e9;
+      }
+    }
+  }
+}
+
+// Tablet Responsive
+@media (max-width: 992px) {
+  .home {
+    .hero {
+      padding: 50px 7%;
+    }
+
+    .hero-content h1 {
+      font-size: 40px;
+    }
+
+    .how-it-works .steps,
+    .why-choose .features {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// Mobile Responsive
+@media (max-width: 768px) {
+  .home {
+    .hero {
+      min-height: auto;
+      padding: 60px 7%;
+    }
+
+    .hero-content {
+      h1 {
+        font-size: 34px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .hero-buttons {
+      gap: 12px;
+
+      a {
+        padding: 11px 18px;
+      }
+    }
+
+    .home-about {
+      padding: 45px 7%;
+
+      h1 {
+        font-size: 27px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .how-it-works,
+    .why-choose {
+      padding: 45px 7%;
+
+      h1 {
+        font-size: 27px;
+      }
+
+      .steps,
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .home-cta {
+      padding: 45px 15px;
+
+      h1 {
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+// Small Mobile
+@media (max-width: 480px) {
+  .home {
+    .hero-content h1 {
+      font-size: 29px;
+    }
+
+    .hero-buttons {
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        text-align: center;
+        min-width: 150px;
+      }
+    }
+
+    .step-card {
+      padding: 22px 15px;
+    }
+
+    .home-cta h1 {
+      font-size: 23px;
+    }
+  }
+}
